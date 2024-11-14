@@ -127,7 +127,17 @@ gltfLoader.load(
         scene.add(suzanne)
     }
 )
+// directional light helper
 
+const plane = new THREE.Mesh(
+    new THREE.PlaneGeometry(),
+    new THREE.MeshBasicMaterial({
+        side: THREE.DoubleSide,
+        color: new THREE.Color(.1, .1, 1.),
+    })
+)
+plane.position.set( .0, .0, 3.);
+scene.add(plane)
 /**
  * Animate
  */
