@@ -8,8 +8,11 @@ void main(){
     //final position
     gl_Position = projectionMatrix * viewMatrix * modelPosition;
 
+
+    //transformed normal
     vec4 modelNormal = modelMatrix * vec4( normal, .0);
 
+    //varring( to be sent to fragment)
     vNormal = modelNormal.xyz;
     vPosition = modelPosition.xyz;
 }
